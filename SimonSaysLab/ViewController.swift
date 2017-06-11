@@ -18,7 +18,79 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        winLabel.isHidden = true
     }
+    
+    @IBAction func redButton(_ sender: Any) {
+        simonSaysGame.guessRed()
+        buttonsClicked += 1
+        
+        if buttonsClicked == 5 {
+            if simonSaysGame.wonGame() {
+                buttonsClicked = 0
+                winLabel.isHidden = false
+                winLabel.text = "You won!"
+            } else {
+                buttonsClicked = 0
+                winLabel.isHidden = false
+                winLabel.text = "Try Again"
+            }
+        }
+        
+    }
+    
+    @IBAction func greenButton(_ sender: Any) {
+        simonSaysGame.guessGreen()
+        buttonsClicked += 1
+        
+        if buttonsClicked == 5 {
+            if simonSaysGame.wonGame() {
+                buttonsClicked = 0
+                winLabel.isHidden = false
+                winLabel.text = "You won!"
+            } else {
+                buttonsClicked = 0
+                winLabel.isHidden = false
+                winLabel.text = "Try Again"
+            }
+        }
+    }
+    
+    @IBAction func yellowButton(_ sender: Any) {
+        simonSaysGame.guessYellow()
+        buttonsClicked += 1
+        
+        if buttonsClicked == 5 {
+            if simonSaysGame.wonGame() {
+                buttonsClicked = 0
+                winLabel.isHidden = false
+                winLabel.text = "You won!"
+            } else {
+                buttonsClicked = 0
+                winLabel.isHidden = false
+                winLabel.text = "Try Again"
+            }
+        }
+    }
+    
+    @IBAction func blueButton(_ sender: Any) {
+        simonSaysGame.guessBlue()
+        buttonsClicked += 1
+        
+        if buttonsClicked == 5 {
+            if simonSaysGame.wonGame() {
+                buttonsClicked = 0
+                winLabel.isHidden = false
+                winLabel.text = "You won!"
+            } else {
+                buttonsClicked = 0
+                winLabel.isHidden = false
+                winLabel.text = "Try Again"
+            }
+        }
+    }
+    
+    
 }
 
 // MARK: - SimonSays Game Methods
